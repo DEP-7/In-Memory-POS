@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextOfCustomerForm" prefHeight="479.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.CustomerFormController">
+    <children>
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToHome" text="Back To Home" textFill="#9e0505">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Label alignment="CENTER" layoutX="129.0" layoutY="11.0" prefHeight="35.0" prefWidth="461.0" text="Customer Form" textFill="#2f0051">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Button layoutX="613.0" layoutY="14.0" mnemonicParsing="false" onAction="#addNewCustomer" text="+ New Customer" textFill="#06299c">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <Separator layoutX="14.0" layoutY="54.0" prefHeight="0.0" prefWidth="717.0" />
+        <TextField fx:id="txtCustomerId" editable="false" layoutX="14.0" layoutY="67.0" promptText="Customer Id">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtCustomerName" layoutX="183.0" layoutY="67.0" prefHeight="29.0" prefWidth="313.0" promptText="Customer Name">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtCustomerSalary" layoutX="510.0" layoutY="67.0" prefHeight="29.0" prefWidth="221.0" promptText="Customer Salary">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtCustomerAddress" layoutX="14.0" layoutY="106.0" prefHeight="30.0" prefWidth="574.0" promptText="Customer Address">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </TextField>
+        <Button fx:id="btnSave" layoutX="597.0" layoutY="106.0" mnemonicParsing="false" onAction="#saveCustomer" prefHeight="27.0" prefWidth="136.0" text="Save Customer" textFill="#06299c">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+        <TextField fx:id="txtSearch" layoutX="14.0" layoutY="163.0" onKeyReleased="#search" prefHeight="29.0" prefWidth="717.0" promptText="Search here">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </TextField>
+        <TableView fx:id="tblCustomer" layoutX="14.0" layoutY="203.0" prefHeight="265.0" prefWidth="717.0">
+            <columns>
+                <TableColumn fx:id="colCustomerId" prefWidth="75.0" text="Customer Id" />
+                <TableColumn fx:id="colCustomerName" prefWidth="162.0" text="Customer Name" />
+                <TableColumn fx:id="colCustomerAddress" prefWidth="220.0" text="Customer Address" />
+                <TableColumn fx:id="colCustomerSalary" prefWidth="116.0" text="Customer Salary" />
+                <TableColumn fx:id="colCustomerOperate" prefWidth="143.0" text="Operate" />
+            </columns>
+        </TableView>
+      <Separator layoutX="14.0" layoutY="147.0" prefHeight="0.0" prefWidth="717.0" />
+    </children>
+</AnchorPane>

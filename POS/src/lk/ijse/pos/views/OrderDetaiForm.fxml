@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="contextOfOrderDetailsForm" prefHeight="479.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.OrderDetailFormController">
+    <children>
+        <Label alignment="CENTER" layoutX="129.0" layoutY="11.0" prefHeight="35.0" prefWidth="461.0" text="Order Details Form" textFill="#2f0051">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Separator layoutX="14.0" layoutY="57.0" prefHeight="0.0" prefWidth="717.0" />
+        <TableView fx:id="tblOrderList" layoutX="14.0" layoutY="71.0" prefHeight="398.0" prefWidth="718.0">
+            <columns>
+                <TableColumn fx:id="colItemCode" prefWidth="198.39998817443848" text="Item Code" />
+                <TableColumn fx:id="colQuantity" prefWidth="267.20001220703125" text="Quantity" />
+                <TableColumn fx:id="colUnitPrice" prefWidth="253.60006713867188" text="Unit Price" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
